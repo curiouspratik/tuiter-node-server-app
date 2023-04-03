@@ -21,6 +21,8 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 // developers use app instance to configure the server on what to do when various types of requests are received.
 const app = express();
 
+
+
 // Configure CORS in app.js by importing it and using it as the first middleware, right after instantiating express
 app.use(cors());
 
