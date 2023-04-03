@@ -23,6 +23,7 @@ const app = express();
 
 
 
+
 // Configure CORS in app.js by importing it and using it as the first middleware, right after instantiating express
 app.use(cors());
 
