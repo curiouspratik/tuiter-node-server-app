@@ -14,14 +14,8 @@ import cors from 'cors';
 
 // The Mongoose library provides a set of operations and abstractions that enhance a MongoDB database
 import mongoose from 'mongoose';
-// // The URL in the connect function is called the connection string and is currently referring to a MongoDB server
-// // instance running in the localhost machine.
-// Way 1: connect to local mongodb
-// mongoose.connect('mongodb://localhost:27017/tuiter');
-// Way 2: connect to remote mongodb database on atlas
-// mongoose.connect('mongodb+srv://MavisMing:h7t44sONVRlFrW1R@cluster0.gikaybh.mongodb.net/?retryWrites=true&w=majority')
-// Way 3: auto switch environment var decide which database we will connect
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://localhost:27017/tuiter';
+console.log(process.env.DB_CONNECTION_STRING);
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/tuiter';
 mongoose.connect(CONNECTION_STRING);
 
 import HelloController from "./controllers/hello-controller.js"
